@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const sequelize = require('./models').sequelize;
 const { User } = require('./models');
+const { Player } = require('./src/models');
+const { Board } = require('./src/board');
+const { Game } = require('./src/game');
+const { Socket } = require('./src/socket');
+
 
 // Configuração da sessão
 app.use(session({
@@ -32,3 +37,6 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Servidor web iniciado na porta 3000');
 });
+
+const game = new Game(/* argumentos */);
+game.start();

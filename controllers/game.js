@@ -1,4 +1,4 @@
-const Game = require('../models/Game');
+const Game = require('../src/models/Game');
 
 // Exibir todos os jogos
 exports.index = async (req, res) => {
