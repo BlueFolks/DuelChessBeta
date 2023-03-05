@@ -1,0 +1,26 @@
+<!-- /DuelChess/views/game/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h1>Games</h1>
+        <% if (games.length > 0) { %>
+        <ul>
+            <% games.forEach(function(game) { %>
+            <li>
+                <a href="/games/<%= game.id %>">
+                    <%= game.id %>
+                </a>
+            </li>
+            <% }); %>
+        </ul>
+        <% } else { %>
+        <p>No games found.</p>
+        <% } %>
+        <a href="/games/create">Create a new game</a>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

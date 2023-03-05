@@ -1,0 +1,25 @@
+DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head %>
+
+    <body>
+        <% include ../partials/header %>
+    
+        <div class="container">
+            <h1>Criar Jogo</h1>
+            <form method="post" action="/game">
+                <div class="form-group">
+                    <label for="name">Nome do Jogo:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nome do Jogo">
+                </div>
+                <button type="submit" class="btn btn-primary">Criar</button>
+            </form>
+        </div>
+    
+        <% include ../partials/footer %>
+    </body>
+    
+
+    
+</body>
+</html>

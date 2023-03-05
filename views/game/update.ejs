@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <title>DuelChess - Update Game</title>
+</head>
+<body>
+    <% include ../partials/header %>
+
+    <main>
+        <h1>Update Game</h1>
+        <form method="POST" action="/games/<%= game.id %>?_method=PUT">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="<%= game.name %>">
+
+            <label for="description">Description:</label>
+            <textarea name="description" id="description"><%= game.description %></textarea>
+
+            <button type="submit">Update</button>
+        </form>
+    </main>
+
+    <% include ../partials/footer %>
+</body>
+</html>
